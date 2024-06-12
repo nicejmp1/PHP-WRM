@@ -1,0 +1,1108 @@
+/* 
+==========================================================================
+전체 CSS 구조
+==========================================================================
+- #section: 메인 페이지의 중심 섹션
+  |__ .title: 섹션의 메인 제목 스타일링
+- .main__banner: 배너 섹션
+  |__ .container: 배너 이미지와 액션 링크를 포함하는 컨테이너
+- .main__info: 정보 섹션
+  |__ .main__info__title: 정보 섹션의 제목
+  |__ .main__info__post: 포스트 컨테이너
+      |__ .main__post__style.column4: 4열 포스트 스타일
+          |__ .post: 개별 포스트
+              |__ .tit: 포스트 제목
+              |__ .pic: 포스트 이미지
+              |__ .day: 포스팅 날짜
+              |__ .like: 좋아요 버튼
+              |__ .post__con: 포스트 컨텐츠
+                  |__ .post__left: 컨텐츠 왼쪽 부분
+                  |__ .post__right: 컨텐츠 오른쪽 부분
+- .main__sub: 부가 정보 섹션
+- .main__rank: 마라톤 순위 섹션
+  |__ .main__rank__title: 순위 섹션의 제목
+  |__ .main__info__post.rank: 순위 정보를 보여주는 포스트
+      |__ .main__post__style.column3: 3열 포스트 스타일
+          |__ .post.rank1: 1등 포스트
+          |__ .post.rank2: 2등 포스트
+          |__ .post.rank3: 3등 포스트
+- .main__crew: 크루 정보 섹션
+  |__ .main__crew__title: 크루 섹션의 제목
+  |__ .main__crew__rank: 크루 랭킹
+      |__ .crew__rank.column4: 4열 크루 랭킹
+          |__ .crew: 개별 크루
+              |__ .crew-tit: 크루 제목
+              |__ .crew-day: 크루 활동 날짜
+              |__ img: 크루 이미지
+- .main__community: 커뮤니티 섹션
+  |__ .main__community__title: 커뮤니티 제목
+  |__ .main__community__mojib: 커뮤니티 모집 정보
+      |__ .box1, .box2, .box3, .box4: 정보 박스
+- .main__news: 뉴스 섹션
+  |__ .main__news__title: 뉴스 제목
+  |__ .main__news__style: 뉴스 스타일
+      |__ .post: 뉴스 포스트
+- .main__footer: 페이지 푸터
+  |__ .container: 푸터 컨테이너
+      |__ span: 푸터 텍스트
+========================================================================== */
+
+/*
+==========================================================================
+SECTION: 메인 페이지 섹션
+- 메인 페이지의 핵심 콘텐츠를 담는 섹션으로, 전체 화면을 차지하며 센터 정렬됩니다.
+========================================================================== */
+#section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section .title {
+    margin-top: 2rem;
+}
+
+#section .title>h1 {
+    font-size: 19.5rem;
+    line-height: 1;
+    font-family: var(--fontO);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--mainColor);
+}
+
+@media (max-width:1190px) {
+
+    #section .title>h1 {
+        font-size: 18rem;
+    }
+}
+
+@media (max-width:1094px) {
+
+    #section .title>h1 {
+        font-size: 16rem;
+    }
+}
+
+@media (max-width:980px) {
+
+    #section .title>h1 {
+        font-size: 15rem;
+    }
+}
+
+@media (max-width:916px) {
+
+    #section .title>h1 {
+        font-size: 14rem;
+    }
+}
+
+@media (max-width:800px) {
+
+    #section .title>h1 {
+        font-size: 13rem;
+    }
+}
+
+@media (max-width:700px) {
+
+    #section .title>h1 {
+        font-size: 11rem;
+    }
+}
+
+@media (max-width:600px) {
+
+    #section .title>h1 {
+        font-size: 10rem;
+    }
+}
+
+
+@media (max-width:500px) {
+
+    #section .title>h1 {
+        font-size: 7rem;
+    }
+}
+
+@media (max-width:400px) {
+
+    #section .title>h1 {
+        font-size: 6.5rem;
+    }
+}
+
+/* 
+==========================================================================
+main__banner: 메인 배너 섹션
+- 메인 배너 이미지와 액션 콜 링크를 포함하는 중요한 시각적 요소입니다.
+========================================================================== */
+.main__banner {
+    text-align: center;
+    height: 100vh;
+    margin-top: 10rem;
+}
+
+.main__banner .container {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/banner/banner-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 25rem 25rem 1.875rem 1.875rem;
+    position: relative;
+}
+
+.main__banner .container>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -10%;
+    left: 0;
+}
+
+.main__banner .container a {
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.25rem 4rem;
+    font-size: 1rem;
+    background-color: var(--white);
+    color: var(--mainColor);
+    border-radius: 1.875rem;
+    transition: all 0.3s;
+}
+
+.main__banner .container a:hover {
+    color: var(--white);
+    background-color: var(--mainColor);
+}
+
+@media (max-width:1000px) {
+    .main__banner {
+        height: 100vh;
+        padding-top: 6rem;
+    }
+
+    .main__banner .container {
+        border-radius: 20rem 20rem 1.875rem 1.875rem;
+        max-height: 800px;
+    }
+
+    .main__banner .container>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main__banner .container a {
+        padding: 1rem 2rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width:800px) {
+    .main__banner {
+        height: 100vh;
+        padding-top: 8rem;
+    }
+
+    .main__banner .container {
+        border-radius: 20rem 20rem 1.875rem 1.875rem;
+        max-height: 600px;
+    }
+
+    .main__banner .container>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main__banner .container a {
+        padding: 1rem 2rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width:700px) {
+    .main__banner {
+        height: 100vh;
+        padding-top: 8rem;
+    }
+
+    .main__banner .container {
+        border-radius: 20rem 20rem 1.875rem 1.875rem;
+        max-height: 600px;
+    }
+
+    .main__banner .container>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main__banner .container a {
+        padding: 1rem 2rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width:500px) {
+    .main__banner {
+        height: 100vh;
+    }
+
+    .main__banner .container {
+        width: 100%;
+        max-height: 500px;
+        border-radius: 9rem 9rem 1rem 1rem;
+
+    }
+
+    .main__banner .container a {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* 
+==========================================================================
+main__info: 정보 섹션
+- 사이트에서 제공하는 중요 정보나 게시물을 보여주는 섹션입니다.
+========================================================================== */
+.main__info .container .main__info__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10rem;
+    color: var(--mainColor);
+}
+
+.main__info__title h3 {
+    text-transform: uppercase;
+    font-family: var(--fontO);
+    letter-spacing: -1px;
+    font-size: 2.875rem;
+    padding: 0.625rem;
+    font-weight: 900;
+}
+
+
+.main__info__title p {
+    font-size: 1.25rem;
+    font-family: var(--fontN);
+    font-weight: 500;
+}
+
+@media (max-width:1000px) {
+    .main__info__title h3 {
+        font-size: 2.6rem;
+    }
+
+    .main__info__title p {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width:500px) {
+    .main__info__title h3 {
+        font-size: 2rem;
+    }
+
+    .main__info__title p {
+        font-size: 1rem;
+    }
+
+}
+
+.main__info__post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main__info>a {
+    display: inline-block;
+    background-color: var(--pointColor);
+    color: var(--mainColor);
+    font-family: var(--fontG);
+    font-weight: 600;
+    padding: 0.625rem 3.125rem;
+    border-radius: 2rem;
+    transition: all 0.3s;
+}
+
+.main__info>a:hover {
+    color: var(--white);
+    background-color: var(--mainColor);
+}
+
+.main__info__post .container {
+    width: 100%;
+    height: 100%;
+}
+
+.main__info__post {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.main__post__style {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main__post__style .post {
+    width: 32%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.main__post__style .post.rank1::after {
+    content: '';
+    width: 80px;
+    height: 130px;
+    left: 20px;
+    top: 0;
+    background-image: url(../ico/rank/rank_ico-1.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 100;
+}
+
+.main__post__style .post.rank2::after {
+    content: '';
+    width: 80px;
+    height: 130px;
+    left: 20px;
+    top: 0;
+    background-image: url(../ico/rank/rank_ico-2.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 100;
+}
+
+.main__post__style .post.rank3::after {
+    content: '';
+    width: 80px;
+    height: 130px;
+    left: 20px;
+    top: 0;
+    background-image: url(../ico/rank/rank_ico-3.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 100;
+}
+
+.main__post__style .post img {
+    border-radius: 20px 20px 0 0;
+    max-height: 400px;
+    min-height: 400px;
+}
+
+.main__post__style.column4 .post {
+    width: 24%;
+}
+
+.main__post__style.column3 .post {
+    width: 32%;
+}
+
+.main__post__style.column2 .post {
+    width: 49%;
+}
+
+.main__post__style.column1 .post {
+    width: 96%;
+}
+
+@media (max-width:800px) {
+
+    .main__post__style {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .main__post__style.column4 .post {
+        width: 49%;
+    }
+
+    .main__post__style.column3 .post {
+        width: 49%;
+    }
+}
+
+@media (max-width:500px) {
+
+    .main__post__style {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .main__post__style.column4 .post {
+        width: 96%;
+        margin-bottom: 5%;
+    }
+
+    .main__post__style.column3 .post {
+        width: 96%;
+        margin-bottom: 5%;
+    }
+}
+
+
+.post .tit {
+    padding: 1rem 0 0 1rem;
+    font-size: 1.25rem;
+    color: var(--mainColor);
+    font-family: var(--fontN);
+    font-weight: 700;
+    background-color: var(--white);
+}
+
+.post .pic {
+    padding: 1rem 0 0 1rem;
+    padding-top: 0.3125rem;
+    font-size: 1rem;
+    font-family: var(--fontN);
+    font-weight: 700;
+    background-color: var(--white);
+}
+
+.post .day {
+    padding: 0 0.5rem 0 1rem;
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--black500);
+    background-color: var(--white);
+}
+
+.post ul {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+}
+
+.post .like {
+    width: 30px;
+    height: 30px;
+    background-image: var(--heart);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.post .like.active {
+    background-image: var(--heartRed);
+}
+
+.post__con {
+    width: 100%;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--white);
+    border-radius: 0 0 20px 20px;
+}
+
+.post__con .post__left {
+    width: 50%;
+    background-color: var(--pointColor);
+    border-radius: 0 0 0 20px;
+}
+
+
+.post__con .post__left a {
+    display: inline-block;
+    padding: 20px;
+    color: var(--mainColor);
+}
+
+.post__con .post__left img {
+    width: 10px;
+    height: 10px;
+    padding-top: 6px;
+    padding-left: 2px;
+}
+
+.post__con .post__right {
+    width: 50%;
+    background-color: var(--pointColor);
+    border-radius: 0 0 20px 0;
+}
+
+.post__con .post__right img {
+    width: 10px;
+    height: 10px;
+    padding-top: 6px;
+    padding-left: 2px;
+}
+
+.post__con .post__right a {
+    display: inline-block;
+    padding: 20px;
+    color: var(--mainColor);
+}
+
+@media (max-width:1000px) {}
+
+@media (max-width:500px) {
+    .main__info .container .main__info__title {
+        margin-top: 6rem;
+    }
+
+    .main__info__post .content1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+}
+
+/* 
+==========================================================================
+ SUB: 부가 정보 섹션
+ - 추가적인 정보를 제공하는 서브 섹션으로, 다양한 컨텐츠를 배치할 수 있습니다.
+ ========================================================================== */
+
+.main__sub {
+    margin-top: 10rem;
+    text-align: center;
+    background-color: var(--mainColor);
+    margin-bottom: 10rem;
+}
+
+.main__sub a {
+    display: inline-block;
+    padding: 5rem;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+@media (max-width:500px) {
+
+    .main__sub {
+        margin-top: 5rem;
+    }
+
+    .main__sub a {
+        padding: 2rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* 
+==========================================================================
+RANK: 순위 섹션
+- 사용자 또는 대상의 순위를 보여주는 섹션으로, 경쟁적 요소를 강조합니다.
+========================================================================== */
+
+.main__rank .container .main__rank__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10rem;
+    color: var(--mainColor);
+}
+
+.main__rank__title h4 {
+    text-transform: uppercase;
+    font-family: var(--fontO);
+    letter-spacing: -1px;
+    font-size: 2.875rem;
+    padding: 0.625rem;
+    font-weight: 900;
+}
+
+
+.main__rank__title p {
+    font-size: 1.25rem;
+    font-family: var(--fontN);
+    font-weight: 500;
+}
+
+@media (max-width:1000px) {
+    .main__rank__title h4 {
+        font-size: 2.6rem;
+    }
+
+    .main__rank__title p {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width:500px) {
+    .main__rank__title h4 {
+        font-size: 2rem;
+    }
+
+    .main__rank__title p {
+        font-size: 1rem;
+    }
+
+}
+
+/* 
+==========================================================================
+CREW: 크루 정보 섹션
+- 팀 또는 조직의 구성원을 소개하는 섹션입니다.
+========================================================================== */
+
+.main__crew {
+    background-color: var(--pointColor);
+    padding-bottom: 12.5rem;
+}
+
+.main__crew .container .main__crew__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10rem;
+    color: var(--mainColor);
+}
+
+.main__crew__title h5 {
+    text-transform: uppercase;
+    font-family: var(--fontO);
+    letter-spacing: -1px;
+    font-size: 2.875rem;
+    padding: 0.625rem;
+    font-weight: 900;
+}
+
+
+.main__crew__title p {
+    font-size: 1.25rem;
+    font-family: var(--fontN);
+    font-weight: 500;
+}
+
+@media (max-width:1000px) {
+    .main__crew__title h5 {
+        font-size: 2.6rem;
+    }
+
+    .main__crew__title p {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width:500px) {
+
+    .main__crew {
+        padding-bottom: 5.5rem;
+    }
+
+    .main__crew .container .main__crew__title {
+        padding-top: 5rem;
+    }
+
+    .main__crew__title h5 {
+        font-size: 2rem;
+    }
+
+    .main__crew__title p {
+        font-size: 1rem;
+    }
+
+}
+
+.crew__rank {
+    margin-top: 3.75rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.crew__rank .crew {
+    width: 32%;
+    margin-bottom: 2%;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.crew__rank.column4 .crew {
+    width: 24%;
+    background-color: var(--mainColor);
+}
+
+.crew__rank.column4 .post {
+    width: 24%;
+}
+
+.crew__rank.column3 .post {
+    width: 32%;
+}
+
+.crew__rank.column2 .post {
+    width: 49%;
+}
+
+.crew__rank.column1 .post {
+    width: 96%;
+}
+
+.crew-tit {
+    width: 25%;
+    font-size: 0.875rem;
+    border-radius: 30px;
+    text-align: center;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+.crew-day {
+    margin-top: 0.75rem;
+    font-size: 1.625rem;
+    font-family: var(--fontG);
+    font-weight: bold;
+    color: var(--white);
+}
+
+.crew>img {
+    width: 100px;
+    height: 100px;
+    padding-top: 40px;
+    padding-left: 6rem;
+}
+
+@media (max-width:950px) {
+
+    .crew__rank {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .crew__rank.column4 .crew {
+        width: 46%;
+    }
+
+    .crew img {
+        width: 100px;
+        height: 100px;
+        padding-top: 40px;
+        padding-left: 8rem;
+    }
+}
+
+@media (max-width:500px) {
+
+    .crew__rank {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .crew__rank.column4 .crew {
+        width: 80%;
+    }
+}
+
+
+.cover {
+    width: 100%;
+    margin-top: 160px;
+    background-color: var(--mainColor);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-parallel {
+    color: var(--white);
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: var(--fontM);
+    font-weight: 900;
+    padding: 2rem;
+}
+
+/* 
+==========================================================================
+NEWS: 뉴스 섹션
+- 최신 뉴스나 업데이트를 표시하는 섹션입니다.
+========================================================================== */
+.main__news {
+    padding-bottom: 10rem;
+}
+
+.main__news .container .main__news__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10rem;
+    color: var(--mainColor);
+}
+
+.main__news__title h6 {
+    text-transform: uppercase;
+    font-family: var(--fontO);
+    letter-spacing: -1px;
+    font-size: 2.875rem;
+    padding: 0.625rem;
+    font-weight: 900;
+}
+
+
+.main__news__title p {
+    font-size: 1.25rem;
+    font-family: var(--fontN);
+    font-weight: 500;
+}
+
+@media (max-width:1000px) {
+    .main__news__title h6 {
+        font-size: 2.6rem;
+    }
+
+    .main__news__title p {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width:500px) {
+    .main__news__title h6 {
+        font-size: 2rem;
+    }
+
+    .main__news__title p {
+        font-size: 1rem;
+    }
+}
+
+.main__news__style {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+}
+
+.main__news__style:last-child {
+    margin-top: 1rem;
+}
+
+.main__news__style .post {
+    width: 32%;
+    margin-bottom: 2%;
+}
+
+.main__news__style.column4 .post {
+    width: 24%;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 18px;
+}
+
+.main__news__style.column4 .post a {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__news__style.column4 .post img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.news-tit {
+    color: var(--mainColor);
+    font-size: 1.25rem;
+    font-family: var(--fontG);
+    font-weight: 500;
+}
+
+.news-pic {
+    font-size: 0.825rem;
+    padding-top: 5px;
+}
+
+/* 
+==========================================================================
+COMMUNITY: 커뮤니티 섹션
+- 사용자 참여와 커뮤니티 구성을 위한 섹션입니다.
+========================================================================== */
+
+.main__community {
+    padding-bottom: 10rem;
+    background-color: var(--mainColor);
+}
+
+.main__community .container .main__community__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10rem;
+    color: var(--white);
+}
+
+.main__community__title h6 {
+    text-transform: uppercase;
+    font-family: var(--fontO);
+    letter-spacing: -1px;
+    font-size: 2.875rem;
+    padding: 0.625rem;
+    font-weight: 900;
+}
+
+.main__community__title p {
+    font-size: 1.25rem;
+    font-family: var(--fontN);
+    font-weight: 500;
+}
+
+@media (max-width:1000px) {
+    .main__community__title h6 {
+        font-size: 2.6rem;
+    }
+
+    .main__community__title p {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width:500px) {
+    .main__community__title h6 {
+        font-size: 2rem;
+    }
+
+    .main__community__title p {
+        font-size: 1rem;
+    }
+
+}
+
+.main__community__mojib {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3.75rem;
+}
+
+.main__community__mojib .box1,
+.main__community__mojib .box2,
+.main__community__mojib .box3,
+.main__community__mojib .box4 {
+    width: 20%;
+    background-color: var(--pointColor);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2.5rem;
+    border-radius: 20px;
+
+}
+
+.box_title {
+    display: block;
+    padding-top: 2.125rem;
+    padding-left: 1.875rem;
+    color: var(--mainColor);
+    font-size: 1.625rem;
+    font-family: var(--fontG);
+    font-weight: bold;
+}
+
+.box_title svg {
+    padding-left: 30px;
+}
+
+.main__community__mojib .box1 img,
+.main__community__mojib .box2 img,
+.main__community__mojib .box3 img,
+.main__community__mojib .box4 img {
+    padding-top: 2.375rem;
+    width: 50%;
+    padding-left: 5rem;
+}
+
+/* 
+==========================================================================
+FOOTER: 페이지 푸터
+- 저작권 정보, 연락처 정보 등을 포함하는 페이지의 하단 부분입니다.
+========================================================================== */
+
+.main__footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.main__footer .container>span {
+    font-size: 10rem;
+    line-height: 1;
+    font-family: var(--fontO);
+    text-transform: uppercase;
+    font-weight: 900;
+    color: var(--mainColor);
+}
+
+@media (max-width:1250px) {
+    .main__footer .container {
+        padding-bottom: 5rem;
+    }
+
+    .main__footer .container>span {
+        font-size: 7rem;
+    }
+}
+
+@media(max-width:870px) {
+    .main__footer .container {
+        padding-bottom: 5rem;
+    }
+
+    .main__footer .container>span {
+        font-size: 6rem;
+    }
+}
+
+@media(max-width:600px) {
+    .main__footer .container {
+        padding-bottom: 5rem;
+    }
+
+    .main__footer .container>span {
+        font-size: 3.3rem;
+    }
+}

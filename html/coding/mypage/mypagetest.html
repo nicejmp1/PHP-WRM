@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="마라톤, 러닝, 대회일정 한눈에 보기">
+    <meta name="keywords" content="마라톤, 러닝, 대회일정, 러닝크루, 훈련팁, 42km, 랭킹, 풀코스, 하프코스, 10km">
+
+    <meta property="og:title" content="러닝 & 마라톤의 모든 것">
+    <meta property="og:url" content="http:nicejmp.dothome.co.kr">
+    <meta property="og:image" content="#">
+    <meta property="og:description" content="WayRunMeaning에서 다양한 마라톤 정보와 일정을 확인하세요!" />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="러닝 & 마라톤의 모든 것">
+    <meta name="twitter:url" content="http:nicejmp.dothome.co.kr">
+    <meta name="twitter:image" content="#">
+    <meta name="twitter:description" content="WayRunMeaning에서 다양한 마라톤 정보와 일정을 확인하세요!" />
+    <link href="../assets/ico/favicon.svg" rel="favicon icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>WayRunMeaning : 러닝 & 마라톤</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header" class="line-bot" role="banner">
+            <div class="container">
+                <div class="header__inner">
+                    <h1 class="logo">
+                        <a href="main.html"><img src="../assets/ico/logo/logo.svg" alt="logo"></a>
+                    </h1>
+                    <nav class="nav" role="navigation">
+                        <ul>
+                            <li><a href="main.html">대회일정</a></li>
+                            <li><a href="#">커뮤러닝</a></li>
+                            <li><a href="#">런피드</a></li>
+                            <li><a href="#">런뉴스</a></li>
+                        </ul>
+                    </nav>
+                    <div class="member">
+                        <ul>
+                            <li><a href="signin/signin.html">로그인</a>
+                            <li><a href="signup/signup.html">회원가입</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <main id="main" role="main">
+            <div class="container">
+                <div class="mypage__title">
+                    <span class="mypage__title01">MY PAGE</span>
+                    <span class="mypage__text02">마이 페이지</span>
+                </div>
+                <!-- //mypage__title -->
+
+                <div class="mypage__information">
+                    <div class="mypage__text03">내 정보</div>
+                    <div class="mypage__information__wrap">
+                        <div class="mypage__information__aside">
+                            <div class="mypage__nickname">
+                                <img src="../assets/img/mypage/my_info_1.svg" alt="프로필이미지">
+                                <div class="my__name">
+                                    <span class="my__nik">닉네임님</span>
+                                    <span class="my__info"><a href="#">정보 수정하기</a></span>
+                                </div>
+                                <span class="my__email">dfddfs@naver.com</span>
+                                <a href="#">로그아웃</a>
+                            </div>
+                        </div>
+                        <div class="mypage__information__contents">
+                            <div class="mypage__contents1">
+                                <ul>
+                                    <li><a href="#">뱃지 &미션
+                                            <img src="../assets/img/mypage/my_info_2.svg" alt="뱃지 & 미션">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">마이 피드
+                                            <img src="../assets/img/mypage/my_info_3.svg" alt="뱃지 & 미션">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">찜한 마라톤
+                                            <img src="../assets/img/mypage/my_info_heart.svg" alt="뱃지 & 미션">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mypage__contents2">
+                                <div>
+                                    <span>내 러닝 레벨</span>
+                                    <p>2</p>
+                                </div>
+                                <div>
+                                    <span>우리가 함께한지</span>
+                                    <p>108일</p>
+                                </div>
+                                <div>
+                                    <span>소속 크루</span>
+                                    <p>나이키런</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //mypage__information -->
+
+                <div class="mypage__text03">이번주 출석 체크
+                    <div class="mypage__check">
+                        <div class="check__wrap">
+                            <div class="mypage__sticker"></div>
+                            <div class="mypage__sticker"></div>
+                            <div class="mypage__sticker"></div>
+                            <div class="mypage__sticker"></div>
+                            <div class="mypage__sticker"></div>
+                            <div class="mypage__sticker"></div>
+                            <div class="mypage__sticker"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- mypage__check -->
+
+                <div class="calendar__text03">러닝 캘린더</div>
+                <div class="calendar__wrap">
+                    <div class="calendar__textwrap">
+                        <h2 class="calendar__title">May 2024</h2>
+                        <div class="calendar__textwrap2">
+                            <a href="#"><span class="calendar__nav">&lt;</span></a>
+                            <a href="#"><span class="calendar__nav">&gt;</span></a>
+                        </div>
+                    </div>
+                    <div class="calendar__cont">
+                        <div class="calendar__cont1">
+                            <table>
+                                <thead class="c__thead">
+                                    <tr class="thead">
+                                        <th>SUN</th>
+                                        <th>MON</th>
+                                        <th>TUE</th>
+                                        <th>WED</th>
+                                        <th>THU</th>
+                                        <th>FRI</th>
+                                        <th>SAT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="tbody">
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr class="tbody">
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>8</td>
+                                        <td>8</td>
+                                        <td>8</td>
+                                        <td>8</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr class="tbody">
+                                        <td>14</td>
+                                        <td>15</td>
+                                        <td>15</td>
+                                        <td>15</td>
+                                        <td>15</td>
+                                        <td>15</td>
+                                        <td>15</td>
+                                    </tr>
+                                    <tr class="tbody">
+                                        <td>21</td>
+                                        <td>22</td>
+                                        <td>22</td>
+                                        <td>22</td>
+                                        <td>22</td>
+                                        <td>22</td>
+                                        <td>22</td>
+                                    </tr>
+                                    <tr class="tbody">
+                                        <td>28</td>
+                                        <td>29</td>
+                                        <td>29</td>
+                                        <td>29</td>
+                                        <td>29</td>
+                                        <td>29</td>
+                                        <td>29</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="event-list">
+                            <ul>
+                                <li><a href="#">한강 나이트 워크</a><span>2024.07.12 </span></li>
+                                <li><a href="#">한강 나이트 워크</a><span>2024.07.12 </span></li>
+                                <li><a href="#">한강 나이트 워크</a><span>2024.07.12 </span></li>
+                                <li><a href="#">한강 나이트 워크</a><span>2024.07.12 </span></li>
+                                <li><a href="#">한강 나이트 워크</a><span>2024.07.12 </span></li>
+                                <li><a href="#">한강 나이트 워크</a><span>2024.07.12 </span></li>
+                                <li><a href="#">한강 나이트 워크</a><span>2024.07.12 </span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- calendar__wrap -->
+
+                <div class="mydiary">
+                    <div class="mydiary__title">마이 다이어리</div>
+                    <div class="mydiary__wrap">
+                        <div class="mydiary1">
+                            <div class="mydiary1-1">
+                                <img src="/html/coding/assets/img/mypage/mydiary1.svg" alt="">
+                                <p class="mydiary__title2">마라톤 접수일</p>
+                                <span class="mydiary__text">D-6</span>
+                            </div>
+                            <div class="mydiary1-2">
+                                <p class="mydiary__title2">오늘 하루도<br> 힘차게<br> 달려보자구요</p>
+                            </div>
+                        </div>
+                        <div class="mydiary2">
+                            <div class="mydiary2-1">
+                                <p class="mydiary__title2">내 페이스</p>
+                                <span class="mydiary__text">6.2</span>
+                            </div>
+                            <div class="mydiary2-2">
+                                <p class="mydiary__title2">걷기 페이스</p>
+                                <span class="mydiary__text">12</span>
+                            </div>
+                            <div class="mydiary2-3">
+                                <p class="mydiary__title2">최고 기록</p>
+                                <span class="mydiary__text">12km</span>
+                            </div>
+                        </div>
+                        <div class="mydiary3">
+                            <div class="mydiary3-1">
+                                <p class="mydiary__title2">이번달 참여 마라톤</p>
+                                <span class="mydiary__text1">한강 나이트워크</span>
+                                <span class="mydiary__text">D-6</span>
+                            </div>
+                            <div class="mydiary3-2">
+                                <p class="mydiary__title2">최고 기록</p>
+                                <span class="mydiary__text1">한강 나이트워크</span>
+                                <span class="mydiary__text">42km</span>
+                            </div>
+                        </div>
+                        <div class="mydiary4">
+                            <div class="mydiary4-1">
+                                <div class="mypage__textwrap">
+                                    <p class="mydiary__title3">JUST DO RUN</p>
+                                </div>
+                                <img src="/html/coding/assets/img/mypage/just.svg" alt="run">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- mydiary -->
+            </div>
+    </div>
+    <!-- calendar -->
+
+    </main>
+    <!--//main -->
+
+    <footer id="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__lnner">
+                <div class="left">
+                    <ul>
+                        <li>멤버가입</li>
+                        <li>
+                            고객센터
+                            <ul>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">문의하기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            팀원
+                            <ul>
+                                <li>박정민</li>
+                                <li>황인지</li>
+                                <li>안지은</li>
+                                <li>박소현</li>
+                            </ul>
+                        </li>
+                        <li>
+                            문의 이메일
+                            <ul>
+                                <li><a href="mailto:nicejpm@naver.com">nicejpm@naver.com</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="sns">
+                        <ul>
+                            <li><a href="#"><span class="blind">페이스북</span></a></li>
+                            <li><a href="#"><span class="blind">트위터</span></a></li>
+                            <li><a href="#"><span class="blind">인스타그램</span></a></li>
+                            <li><a href="#"><span class="blind">유튜브</span></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bot">
+                <div class="left_bot">
+                    <p class="copy">COPYRIGHT © WayRunMeaning. All Rights Reserved.</p>
+                </div>
+                <div class="right_bot">
+                    <ul>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">위치 기반 서비스 약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+    </div>
+</body>
+
+</html>
